@@ -1,4 +1,4 @@
-package com.Bridgelabz.DataStructure_Utility;
+package com.Bridgelabz.DataStructure;
 
 
 public class Month {

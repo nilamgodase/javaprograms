@@ -1,4 +1,4 @@
-package com.Bridgelabz.DataStructure_Utility;
+package com.Bridgelabz.DataStructure;
 
 
 
@@ -49,7 +49,8 @@ public class LinkedList
 		 return false;
 	}
 
-	public Object pollFirst() {
+	public Object pollFirst() 
+	{
 		Object obj = head.obj;
 		head = head.next;
 		return obj;
@@ -60,7 +61,8 @@ public class LinkedList
 		else return false;
 	}
 
-	public int size() {
+	public int size() 
+	{
 		Node tempNode = head;
 		int count = 0;
 		
@@ -139,8 +141,8 @@ public class LinkedList
 		}
 		previousNode.next=null;
 	}
-}
 
+}
 /*	public void modifyAmount(String name,double amount) {
 		Node tempNode = head;
 		Customer cust =(Customer) tempNode.obj;

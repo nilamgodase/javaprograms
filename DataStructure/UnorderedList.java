@@ -1,191 +1,51 @@
 package com.Bridgelabz.DataStructure;
-public class UnorderedList<T>
-{
-	private Node head;
-	Node tail;
-	private int size = 0;
 
+
+	import java.io.BufferedReader;
+	import java.io.BufferedWriter;
+	import java.io.FileReader;
+	import java.io.FileWriter;
 	
-	public void add(T data) 
-	{
+	/**
+	 *@problem statement:Read the Text from a file, split it into words and arrange it as Linked List.
+	 *                   Take a user input to search a Word in the List. If the Word is not found then add it to the list, and if it found then remove the word from the List. In the end save the list into a file
+
+	 *@author : Nilam Godase
+	 *@since: 6/3/2019
+	 *@version:1.0
+	 */
+
+
+	/**@param: created class for unorderedlist
+	 * 
+	 */
+	public class UnorderedList {
+
+		public void unorderList() {
+			IoFile io = new IoFile();
+			String str[]=io.readFromFile("/home/admin1/Documents/Data.txt").split(" ");
+			Utility u = new Utility();
+			LinkedList list = new LinkedList();
+			for(int i=0; i<str.length; i++) {
+				list.add(str[i]);
+			}
+			list.display();
+			String st = u.getNext("\nEnter word");
+			if(list.search(st)) {
+				list.remove(st);
+			}else list.add(st);
+			list.display();
+			io.writeToFile(list,"abc.txt");
+		}
 		
-		Node n = new Node();
-		if (head == null)
-		{
-			head = n;
-			size++;
-		} else 
-		{
-			Node node = head;
-			while (node.next != null)
-			{
-				node = node.next;
-			}
-			// adds the node as last node
-			node.next = n;
-			size++;
-		}
-	}
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
 
-	
-	public void remove(T item)
-	{
-		
-		Node n = head;
-		Node prev = null;
-		if (head.data.equals(item)) 
-		{
-			head = head.next;
-			size -= 1;
-			return;
+			UnorderedList un = new UnorderedList();
+			un.unorderList();
 		}
-		while (!n.data.equals(item))
-		{
-			prev = n;
-			n = n.next;
-		}
-		n = n.next;
-		prev.next = n;
-		n = null;
-		size -= 1;
-	}
-
-	public void removeAtLast() {
-		Node n = head;
-		Node prev = null;
-		while (n.next != null) {
-			prev = n;
-			n = n.next;
-		}
-		System.out.println("hheeyy");
-		// remove the node as last node
-		prev.next = null;
-		size--;
-	}
-
-	
-	public boolean search(T item) 
-	{
-		Node n = head;
-		while (n.next != null)
-		{
-			if (n.data.equals(item)) {
-				return true;
-			}
-			n = n.next;
-		}
-		return false;
-	}
-
-	
-	public boolean isEmpty() 
-	{
-		if (head == null)
-		{
-			return true;
-		}
-		return false;
-	}
-
-
-	public int size() 
-	{
-		return size;
-	}
-
-	public int index(T item) 
-	{
-		int index = 0;
-		Node n = head;
-		while (!n.data.equals(item)) 
-		{
-			n = n.next;
-			index++;
-		}
-		return index;
 
 	}
 
-	
-	public void insert(int pos, T item) throws IndexOutOfBoundsException
-	{
-		if (pos > size || pos < 0)
-		{
-			throw new IndexOutOfBoundsException();
-		}
-		int index = 0;
-		Node n = head;
-		Node node = new Node();
-		if (pos == 0) 
-		{
-			node.next = head;
-			head = node;
-		} else 
-		{
-			while (index != pos) 
-			{
-				n = n.next;
-			}
-			node.next = n.next;
-			n.next = node;
-		}
-		size++;
-	}
 
-	public T pop()
-	{
-		Node n = head;
-		if (size == 1) 
-		{
-			head = head.next;
-			size--;
-			return (T) n.data;
-		}
-		while (n.next != null) {
-			n = n.next;
-		}
-		T ret = (T) n.data;
-		n = n.next;
-		size -= 1;
-		return ret;
-	}
 
-	
-	public T pop(int pos) {
-		int index = 0;
-		Node n = head;
-		if (pos == 0) {
-			head = head.next;
-			size--;
-			return (T) n.data;
-		}
-		Node prev = null;
-		while (index != pos) {
-			prev = n;
-			n = n.next;
-			index++;
-		}
-		prev.next = n.next;
-		size -= 1;
-		return (T) n.data;
-	}
-
-	public String toString() {
-		StringBuffer s = new StringBuffer();
-		s.append("[ ");
-		Node node = head;
-		while (node != null) {
-			s.append(node.data);
-			node = node.next;
-			s.append(",");
-		}
-		s.append(" ]");
-		return s.toString();
-	}
-
-	
-	public void show() {
-		System.out.println(toString());
-	}
-
-}

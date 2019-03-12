@@ -1,4 +1,4 @@
-package com.Bridgelabz.DataStructure_Utility;
+package com.Bridgelabz.DataStructure;
 
 
 import java.util.Stack;
@@ -11,7 +11,7 @@ public class CalendarWithStack {
 			stack1.push(queue);  //push the statck in queue
 		}
 		
-		public Stack transferFromOneStackToOther() {    //declared the method for transforming one element to anoth stack
+		public Stack transferFromOneStackToOther() { //declared the method for transforming one element to anoth stack
 			int size = stack1.size();  //take the size of stack with return type is integer
 			Stack stack2 = new Stack();   //created object of second stack
 			for(int i=0; i<size; i++) {
@@ -34,7 +34,7 @@ public class CalendarWithStack {
 			//calendarWithStack.calendarWithStack(q2);
 			calendarWithStack.calendarWithStack(q3);
 			Stack stack = calendarWithStack.transferFromOneStackToOther();
-			Queue qu1 = (Queue)stack.peek();  //peak the top of number in queue using statck
+			Queue qu1 = (Queue)stack.peek();  //peak the top of number in queue using stack
 			Queue qu2 = (Queue)stack.peek();
 			Queue qu3 = (Queue)stack.peek();
 			//calendarWithQueue.display(qu1);

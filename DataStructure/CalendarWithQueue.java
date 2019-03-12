@@ -1,14 +1,7 @@
-package com.Bridgelabz.DataStructure_Utility;
-
-
-
-
-	public class CalendarWithQueue 
+package com.Bridgelabz.DataStructure;
+public class CalendarWithQueue 
 	{
-
-		
-
-			public Queue weekDayWithQueue(String[][] arr) {   //take the week of the day using queue 
+	public Queue weekDayWithQueue(String[][] arr){   //take the week of the day using queue 
 				Queue queue = new Queue();   //created object of queue
 				for(int i=0; i<7; i++) {    //check the week of day using for loop
 					for(int j=0; j<7; j++) {

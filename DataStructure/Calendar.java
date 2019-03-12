@@ -1,13 +1,13 @@
-package com.Bridgelabz.DataStructure_Utility;
-
-
-
+package com.Bridgelabz.DataStructure;
 public class Calendar 
 {
 	
-	public void display(String[][] mon) {
-		for(int i=0; i<7; i++) {
-			for(int j=0; j<7; j++) {
+	public void display(String[][] mon) 
+	{
+		for(int i=0; i<7; i++) 
+		{
+			for(int j=0; j<7; j++)
+			{
 				if(mon[i][j]==null) break;
 				System.out.print(mon[i][j]+"    ");
 			}
