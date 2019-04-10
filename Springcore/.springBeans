@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.9.8.201903260659-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>src/com/bridgelabz/CoreAnnotation/springComponent.xml</config>
+		<config>src/com/bridgelabz/qualifierAnnotation/qualifierAnnotation.xml</config>
+		<config>src/com/bridgelabz/SpringAutowiring/springAutowirWarehouse.xml</config>
+		<config>springValue1.xml</config>
+		<config>autowirAnotation1.xml</config>
+		<config>autowirAnnotation.xml</config>
+		<config>springComponent.xml</config>
+		<config>spring2.xml</config>
+		<config>qualifierAnnotation.xml</config>
+		<config>AutowirByType.xml</config>
+		<config>springAutowir.xml</config>
+		<config>springAutowirWarehouse.xml</config>
+		<config>spring3.xml</config>
+		<config>springCar.xml</config>
+		<config>springStudent.xml</config>
+		<config>spring1.xml</config>
+		<config>spring.xml</config>
+		<config>innerBean.xml</config>
+	</configs>
+	<autoconfigs>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>

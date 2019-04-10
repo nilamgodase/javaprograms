@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="studentdetails" class="com.bridgelabz.SpringCollection.College">
+	<property name="clg_name" value="Techno india"/>
+	<property name="phno" value="67589587"/>
+	<property name="location" value="mumbai"/>
+	<property name="student1">
+	<list>
+	<ref bean="st1"/>
+	<ref bean="st2"/>
+	<ref bean="st3"/>
+	</list>
+	</property>
+	
+	<property name="student2">
+	<set>
+	<ref bean="st1"/>
+	<ref bean="st2"/>
+	<ref bean="st3"/>
+	</set>
+	</property>
+	
+	<property name="student3">
+	<map>
+	<entry key="1" value="india"/>
+	<entry key="2" value="usa"/>
+	<entry key="3" value="uk"/>
+	</map>
+	</property>
+	</bean>
+	
+	<bean id="st1" class="com.bridgelabz.SpringCollection.Student">
+	<property name="st_id" value="101"/>
+	<property name="name" value="dev"/>
+	<property name="city" value="kolkata"/>
+	<property name="marks" value="75"/>
+	</bean>
+	
+	<bean id="st2" class="com.bridgelabz.SpringCollection.Student">
+	<property name="st_id" value="102"/>
+	<property name="name" value="sam"/>
+	<property name="city" value="bengalore"/>
+	<property name="marks" value="85"/>
+	</bean>
+	
+	<bean id="st3" class="com.bridgelabz.SpringCollection.Student">
+	<property name="st_id" value="103"/>
+	<property name="name" value="apu"/>
+	<property name="city" value="delhi"/>
+	<property name="marks" value="65"/>
+	</bean>
+	</beans>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="carwale" class="com.bridgelabz.SpringCollection.ShowRoom">
+	<property name="name" value="India"/>
+	<property name="city" value="mumbai"/>
+	<property name="cars">
+	<list>
+	<ref bean="car1"/>
+	<ref bean="car2"/>
+	<ref bean="car3"/>
+	</list>
+	</property>
+	</bean>
+	
+	<bean id="car1" class="com.bridgelabz.SpringCollection.Car">
+	<property name="name" value="hyundai"/>
+	<property name="colour" value="black"/>
+	<property name="price" value="900000"/>
+	</bean>
+	
+	<bean id="car2" class="com.bridgelabz.SpringCollection.Car">
+	<property name="name" value="bmw"/>
+	<property name="colour" value="red"/>
+	<property name="price" value="2000000"/>
+	
+	</bean>
+	
+	<bean id="car3" class="com.bridgelabz.SpringCollection.Car">
+	<property name="name" value="audi"/>
+	<property name="colour" value="white"/>
+	<property name="price" value="1200000"/>
+	
+	</bean>
+	
+	</beans>
